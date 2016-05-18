@@ -1,0 +1,24 @@
+doctype html
+html()
+	head
+		title='User Profile'
+		link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css')
+	body
+		block content
+		div#container
+		div(class="page-header" class="text-center")
+			h1 
+				span(class='fa', class='fa-anchor') Profile Page <br>
+				a(href='/logout', class='btn', class='btn-default') Logout
+		div(class='col-sm-6')
+			p 
+				strong id:
+				!{user._id} <br>
+				strong username:
+				!{user.local.username) <br>
+				strong password:
+				!{user.local.password) <br>
+			
+	
+			
+			

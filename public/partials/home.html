@@ -1,0 +1,16 @@
+<h1>Soccer Spirits Simulator</h1>
+<p>
+    <a href="/#/addTeam">Add a Team</a> <br><br>
+	My Teams
+</p>
+<ul>
+	<li ng-repeat='team in teams'> <a href="/#/{{team._id}}">
+	{{team.name}}
+	</a>
+
+	<a href="/#/delete/{{team._id}}">
+		<i class="glyphicon glyphicon-remove"></i>
+	</a>
+	
+	</li>
+</ul>

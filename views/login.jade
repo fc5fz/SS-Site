@@ -1,0 +1,25 @@
+doctype html
+html()
+	head
+		title='Login'
+		link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css')
+	body
+		block content
+		div#container
+		div(class='col-sm-6' class ='col-sm-offset-3')
+			h1 
+				span(class='fa' class='fa-sign-in') Login
+			if(message.length > 0)
+				div(class='alert', class='alert-danger') !{message} 
+			form(method='post' action='/login')
+				div(class='form-group')
+					label Username
+					input(type='text' class='form-control' name='username')
+				div(class='form-group')
+					label Password
+					input(type='password' class='form-control' name='password')
+				button(type='submit' class='btn' class='btn-warning' class='btn-lg') Login
+			p 
+				a(href='/signup') Need an account?
+			p
+				a(href='/') Home

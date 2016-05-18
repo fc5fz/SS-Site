@@ -1,0 +1,7 @@
+extends layout
+block content
+	div(ng-view)
+	div(class='jumbotron', class='text-center')
+		span Current User: !{user} <br>
+		a(class='btn' class='btn-default',href='/logout') 
+			span(class='fa' class='fa-user') Logout
