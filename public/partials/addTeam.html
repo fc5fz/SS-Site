@@ -1,71 +1,140 @@
 <h1>Add a Team</h1>
 
+
+
+
 <form>
     <div class="form-group">
-        <label>Name</label>		
+        <label>Team Name</label>		
         <input class="form-control" ng-model="team.name"></input>
     </div>
     <div class="form-group">
         <label>LWF</label>
-        <input class="form-control" ng-model="team.lwf"></input>
+        <select class="form-control" ng-model="team.lwf">
+		<option></option>
+		<option ng-repeat='player in players'>
+			{{player.name}}
+		</option>
+		</select>
     </div>
 	 <div class="form-group">
         <label>STCL</label>
-        <input class="form-control" ng-model="team.stcl"></input>
+          <select class="form-control" ng-model="team.stcl">		<option></option>
+
+		<option ng-repeat='player in players'>
+			{{player.name}}
+		</option>
+		
+		</select>
 				</div>
 
 	 <div class="form-group">
         <label>STCR</label>
-        <input class="form-control" ng-model="team.stcr"></input>
-				</div>
+  <select class="form-control" ng-model="team.stcr">		<option></option>
+
+		<option ng-repeat='player in players'>
+			{{player.name}}
+		</option>
+		
+		</select>				</div>
 
 	 <div class="form-group">
         <label>RWF</label>
-        <input class="form-control" ng-model="team.rwf"></input>
-				</div>
+  <select class="form-control" ng-model="team.rwf">		<option></option>
+
+		<option ng-repeat='player in players'>
+			{{player.name}}
+		</option>
+		
+		</select>				</div>
 
 	 <div class="form-group">
         <label>CL</label>
-        <input class="form-control" ng-model="team.cl"></input>
-				</div>
+  <select class="form-control" ng-model="team.cl">		<option></option>
+
+		<option ng-repeat='player in players'>
+			{{player.name}}
+		</option>
+		
+		</select>				</div>
 
 	 <div class="form-group">
         <label>CML</label>
-        <input class="form-control" ng-model="team.cml"></input>
-				</div>
+  <select class="form-control" ng-model="team.cml">		<option></option>
+
+		<option ng-repeat='player in players'>
+			{{player.name}}
+		</option>
+		
+		</select>				</div>
 
 	 <div class="form-group">
         <label>CMR</label>
-        <input class="form-control" ng-model="team.cmr"></input>
-				</div>
+  <select class="form-control" ng-model="team.cmr">		<option></option>
+
+		<option ng-repeat='player in players'>
+			{{player.name}}
+		</option>
+		
+		</select>				</div>
 
 	 <div class="form-group">
         <label>CR</label>
-        <input class="form-control" ng-model="team.cr"></input>
-				</div>
+  <select class="form-control" ng-model="team.cr">		<option></option>
+
+		<option ng-repeat='player in players'>
+			{{player.name}}
+		</option>
+		
+		</select>				</div>
 
 	 <div class="form-group">
         <label>DL</label>
-        <input class="form-control" ng-model="team.dl"></input>
-				</div>
+  <select class="form-control" ng-model="team.dl">		<option></option>
+
+		<option ng-repeat='player in players'>
+			{{player.name}}
+		</option>
+		
+		</select>				</div>
 
 	 <div class="form-group">
         <label>CBL</label>
-        <input class="form-control" ng-model="team.cbl"></input>
-				</div>
+  <select class="form-control" ng-model="team.cbl">		<option></option>
+
+		<option ng-repeat='player in players'>
+			{{player.name}}
+		</option>
+		
+		</select>				</div>
 
 	 <div class="form-group">
         <label>CBR</label>
-        <input class="form-control" ng-model="team.cbr"></input>
-				</div>
+  <select class="form-control" ng-model="team.cbr">		<option></option>
+
+		<option ng-repeat='player in players'>
+			{{player.name}}
+		</option>
+		
+		</select>				</div>
 
 	 <div class="form-group">
         <label>DR</label>
-        <input class="form-control" ng-model="team.dr"></input>
-		</div>
+  <select class="form-control" ng-model="team.dr">		<option></option>
+
+		<option ng-repeat='player in players'>
+			{{player.name}}
+		</option>
+		
+		</select>		</div>
 		 <div class="form-group">
         <label>GK</label>
-        <input class="form-control" ng-model="team.gk"></input>
-		</div>
+  <select class="form-control" ng-model="team.gk">		<option></option>
+
+		<option ng-repeat='player in players'>
+			{{player.name}}
+		</option>
+		
+		</select>		</div>
     <input type="button" class="btn btn-primary" value="Save" ng-click="save()"></input>	
 </form>

@@ -11,6 +11,8 @@ var passport = require('passport');
 var routes = require('./routes/index');
 var teams = require('./routes/teams');
 var loginRoutes = require('./routes/login');
+var players = require('./routes/players');
+var simulation = require('./routes/simulate');
 var jwt = require('jwt-simple');
 var app = express();
 var port = process.env.PORT || 8080;
@@ -33,7 +35,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 //app.use('/', routes);
 app.use('/api/teams', teams);
-
+app.use('/api/players', players);
+app.use('/api/simulate', simulation);
 app.use(session({ secret: 'testsecret', resave: false, saveUninitialized: true })); // session secret
 app.use(passport.initialize());
 app.use(passport.session()); // persistent login sessions

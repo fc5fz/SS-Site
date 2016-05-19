@@ -42,6 +42,10 @@ app.controller('HomeCtrl', ['$scope', '$resource', '$location', '$routeParams',
     }]);
 app.controller('AddTeamCtrl', ['$scope', '$resource', '$location',
     function($scope, $resource, $location){
+		var players = $resource('/api/players');
+		players.query(function(players) {
+			$scope.players = players;
+		});
         $scope.save = function(){
             var teams = $resource('/api/teams');
             teams.save($scope.team, function(){
@@ -51,6 +55,11 @@ app.controller('AddTeamCtrl', ['$scope', '$resource', '$location',
     }]);
 app.controller('EditTeamCtrl', ['$scope', '$resource', '$location', '$routeParams',
     function($scope, $resource, $location, $routeParams){	
+		var players = $resource('/api/players');
+		players.query(function(players) {
+			$scope.players = players;
+		});
+	
         var Teams = $resource('/api/teams/:id', { id: '@_id' }, {
             update: { method: 'PUT' }
         });
